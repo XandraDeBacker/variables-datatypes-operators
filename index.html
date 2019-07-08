@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Variables-datatypes-operators</title>
+  </head>
+  <body>
+
+    <h2>What are Variables</h2>
+
+    <p>
+      JavaScript variables are containers for storing data values.
+      Variable means anything that can vary. JavaScript includes variables which hold the data value and it can be changed anytime.
+      </p>
+
+    <p>
+      JavaScript uses reserved keyword var to declare a variable. A variable must have a unique name. You can assign a value to a variable using equal to (=) operator when you declare it or before using it.
+      </p>
+
+    <p>
+      Multiple variables can also be declared in a single line separated by comma.
+      </p>
+
+    <p>
+      JavaScript allows variable declaration without var keyword. You must assign a value when you declare a variable without var keyword.
+      It is Not Recommended to declare a variable without var keyword. It can accidently overwrite an existing global variable.
+      </p>
+
+
+    <h2>Define Variables with an example</h2>
+
+    <p>var x = 5; <br>
+        var y = 6;<br>
+        var z = x + y <br>
+      The outcome will be: <br>
+      The value of z is: 11
+    </p>
+    <p>var price1 = 5;<br>
+        var price2 = 6; <br>
+        var total = price1 + price2; <br>
+        The outcome will be:<br>
+        The total is: 11
+      </p>
+
+      <p>
+        var pi = 3.14;<br>
+        var person = "John Doe"; <br>
+        var answer = 'Yes I am!'; <br>
+        The outcome will be: <br>
+        3.14 <br>
+        John Doe <br>
+        Yes I am! <br>
+      </p>
+
+      <p>
+        Extra large or extra small numbers can be written with scientific (exponential) notation: <br>
+        var y = 123e5; <br>
+        var z = 123e-5; <br>
+        The outcome will be:
+        12300000 <br>
+        0,00123
+        </p>
+        <p id="demo"></p>
+
+        <script>
+          var y = 123e5;
+          var z = 123e-5;
+
+          document.getElementById("demo").innerHTML =
+          y + "<br>" + z;
+          </script>
+
+        <p>
+        Creating a variable in JavaScript is called "declaring" a variable.
+        </p>
+        <p>
+          You declare a JavaScript variable with the var keyword: <br>
+          var carName;
+          </p>
+        <p>
+          After the declaration, the variable has no value (technically it has the value of undefined). <br>
+          To assign a value to the variable, use the equal sign:<br>
+          var carName = "Volvo";
+          </p>
+
+        <p>Create a variable, assign a value to it, and display it:</p>
+
+        <p id="demo"></p>
+
+        <script>
+          var carName = "Volvo";
+          document.getElementById("demo").innerHTML = carName;
+        </script>
+
+        <p>You can declare many variables in one statement.</p>
+
+        <p id="demo2"></p>
+
+        <script>
+          var person = "John Doe", carName = "Volvo", price = 200;
+          document.getElementById("demo2").innerHTML = carName+ " "+person;
+        </script>
+
+        <p>As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +:
+          </p>
+          <p>The result of adding 5 + 2 + 3:</p>
+          <p id="demo3"></p>
+
+          <script>
+            var x = 5 + 2 + 3;
+            document.getElementById("demo3").innerHTML = x;
+          </script>
+
+          <p>
+            You can also add strings, but strings will be concatenated:
+          </p>
+          <p>The result of adding "John" + " " + "Doe":</p>
+
+          <p id="demo4"></p>
+
+          <script>
+            var x = "John" + " " + "Doe";
+            document.getElementById("demo4").innerHTML = x;
+          </script>
+
+          <p>
+            Also try this: <br>
+            If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated:
+          </p>
+          <p>The result of adding "5" + 2 + 3:</p>
+
+<         p id="demo5"></p>
+
+          <script>
+            x = "5" + 2 + 3;
+            document.getElementById("demo5").innerHTML = x;
+          </script>
+
+          <p>And:</p>
+          <p>The result of adding 2 + 3 + "5":</p>
+
+          <p id="demo6"></p>
+
+          <script>
+            var x = 2 + 3 + "5"
+            document.getElementById("demo6").innerHTML = x;
+          </script>
+
+          <h2>Define Let</h2>
+
+          <p> Variables declared with let can be reassigned to new values</p>
+
+
+          <p id="demo7"></p>
+
+          <script>
+            var i = 5;
+            for (var i = 0; i < 10; i++) {
+              // some statements
+            }
+            document.getElementById("demo7").innerHTML = i;
+          </script>
+          <p>The outcome will be 10</p>
+
+
+          <p id="demo8"></p>
+
+          <script>
+            let test = 5;
+            for (let test = 0; test < 10; test++) {
+  // some statements
+}
+          document.getElementById("demo8").innerHTML = test;
+          console.log(test);
+          console.dir (test);
+        </script>
+        <p>The outcome is 5</p>
+        <p>In the first example, using var, the variable declared in the loop redeclares the variable outside the loop. <br>
+
+          In the second example, using let, the variable declared in the loop does not redeclare the variable outside the loop.<br>
+
+          When let is used to declare the i variable in a loop, the i variable will only be visible within the loop.</p>
+
+          <h2>Defining Variables using Constant</h2>
+
+          <p id="demo9"></p>
+
+          <script>
+            var  x = 10;
+            // Here x is 10
+            {
+              const x = 2;
+              // Here x is 2
+            }
+            // Here x is 10
+            document.getElementById("demo9").innerHTML = x;
+            console.dir(x);
+          </script>
+
+          <p>The outcome is 10</p>
+
+          <h2>What are Datatypes</h2>
+
+          <p>
+            JavaScript variables can hold many data types: numbers, strings, objects and more:
+          </p>
+          <p>
+            When adding a number and a string, JavaScript will treat the number as a string.
+          </p>
+          <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+          <p id="demo11"></p>
+
+          <script>
+            var x = 16 + "Volvo";
+            document.getElementById("demo11").innerHTML = x;
+            console.log(x);
+            console.dir(x);
+          </script>
+
+          <p>When adding a string and a number, JavaScript will treat the number as a string.</p>
+
+          <p id="demo12"></p>
+
+          <script>
+            var x = "Volvo" + 16;
+            document.getElementById("demo12").innerHTML = x;
+            console.log(x);
+          </script>
+
+          <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+
+          <p id="demo13"></p>
+
+          <script>
+            var x = 16 + 4 + "Volvo";
+            document.getElementById("demo13").innerHTML = x;
+          </script>
+          <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+          <p>The outcome is 20Volvo</p>
+          <p id="demo14"></p>
+
+          <script>
+            var x = "Volvo" + 16 + 4;
+            document.getElementById("demo14").innerHTML = x;
+          </script>
+          <p>The outcome is Volvo164</p>
+
+          <p>In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo".<br>
+            In the second example, since the first operand is a string, all operands are treated as strings.
+          </p>
+
+          <p id="demo15"></p>
+
+          <script>
+            var x;         // Now x is undefined
+            x = 5;         // Now x is a Number
+            x = "John";      // Now x is a String
+
+            document.getElementById("demo15").innerHTML = x;
+          </script>
+          <p>The outcome is John</p>
+          <p>JS will take the last put variable</p>
+
+      <h2>JavaScript Strings</h2>
+
+          <p>Strings are written with quotes. You can use single or double quotes:</p>
+
+          <p id="demo16"></p>
+
+          <script>
+            var carName1 = "Volvo XC60";
+            var carName2 = 'Volvo XC60';
+
+            document.getElementById("demo16").innerHTML =
+            carName1 + "<br>" +
+            carName2;
+          </script>
+
+          <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+          </p>
+          <p id="demo17"></p>
+
+          <script>
+            var answer1 = "It's alright";
+            var answer2 = "He is called 'Johnny'";
+            var answer3 = 'He is called "Johnny"';
+
+            document.getElementById("demo17").innerHTML =
+            answer1 + "<br>" +
+            answer2 + "<br>" +
+            answer3;
+          </script>
+    <h2>JavaScript Numbers</h2>
+
+          <p>Numbers can be written with, or without decimals:</p>
+
+          <p id="demo18"></p>
+
+          <script>
+            var x1 = 34.00;
+            var x2 = 34;
+            var x3 = 3.14;
+
+            document.getElementById("demo18").innerHTML =
+            x1 + "<br>" + x2 + "<br>" + x3;
+          </script>
+
+    <h2>JavaScript Booleans</h2>
+
+          <p>Booleans can have two values: true or false:</p>
+
+            <p id="demo19"></p>
+
+            <script>
+              var x = 5;
+              var y = 5;
+              var z = 6;
+              document.getElementById("demo19").innerHTML =
+              (x == y) + "<br>" + (x == z);
+            </script>
+    <!-- <p>De "+" is nodig om aan te geven dat er nog vergelijkingen volgen.</p> -->
+
+    <h2>JavaScript Arrays</h2>
+            <p>
+              JavaScript arrays are written with square brackets.<br>
+              Array items are separated by commas.<br>
+              The following code declares (creates) an array called cars, containing three items (car names):<br>
+            </p>
+            <p>Array indexes are zero-based, which means the first item is [0].</p>
+
+            <p id="demo20"></p>
+
+            <script>
+              var cars = ["Saab","Volvo","BMW"];
+
+              document.getElementById("demo20").innerHTML = cars[0];
+            </script>
+            <p>The outcome will be Saab because that's 0.</p>
+
+    <h2>JavaScript Operators</h2>
+
+          <p>
+            JavaScript includes operators as in other languages.<br>
+            An operator performs some operation on single or multiple operands (data value) and produces a result.<br>
+             For example 1 + 2, where + sign is an operator and 1 is left operand and 2 is right operand. + operator adds two numeric values and produces a result which is 3 in this case.
+          </p>
+
+
+          <p></p>
+            JavaScript includes following categories of operators:
+
+            <ol>
+              <li>Arithmetic Operators</li>
+              <li>Comparison Operators</li>
+              <li>Logical Operators</li>
+              <li>Assignment Operators</li>
+              <li>Conditional Operators</li>
+            </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
