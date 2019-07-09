@@ -340,8 +340,20 @@
 
     <h2>Datatypes </h2>
     https://www.tutorialsteacher.com/codeeditor?cid=js-171
+    <p>
+      JavaScript includes data types similar to other programming languages like Java or C#. <br>
+      Data type indicates characteristics of data.<br>
+       It tells the compiler whether the data value is numeric, alphabetic, date etc., so that it can perform the appropriate operation.<br>
+       JavaScript includes primitive and non-primitive data types as per latest ECMAScript 5.1.
+    </p>
+    <p>
+      The PRIMITIVE datatypes are: string, number, boolean, null, undefined.
+    </p>
 
-    <h1>Demo: Loosely type</h1>
+
+
+
+    <h4>Demo: Loosely type</h4>
 
 	<script>
 		var myVar = 100;
@@ -352,8 +364,43 @@
 
 		alert(myVar);
     </script>
+    <p>
+      In the above example, myVar will hold last assigned value to it that is string "Steve".
+    </p>
 
+    <p>String value can be assigned to a variable using equal to (=) operator:</p>
 
+    <p id="w1"></p>
+	<p id="w2"></p>
+
+	<script>
+		var str1 = "Hello World";
+
+		var str2 = 'Hello World';
+
+		document.getElementById("w1").innerHTML = str1;
+		document.getElementById("w2").innerHTML = str2;
+    </script>
+    <p>
+    A string is immutable in JavaScript, it can be concatenated using plus (+) operator in JavaScript.
+  </p>
+  <h4>Demo: JavaScript String Concatenation</h4>
+
+	<p id="w3"></p>
+
+	<script>
+		var str = 'Hello ' + "World " + 'from ' + 'TutorialsTeacher';
+
+		document.getElementById("w3").innerHTML = str;
+    </script>
+
+  <h4>String is arrey</h4>
+  <p>
+    A string can also be treated like zero index based character array.
+  </p>
+
+<!-- Carry on with the assignment with the following link for also number, boolean, ...:
+https://www.tutorialsteacher.com/javascript/javascript-string -->
 
 
 
