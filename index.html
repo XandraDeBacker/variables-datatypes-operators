@@ -338,6 +338,26 @@
             </script>
             <p>The outcome will be Saab because that's 0.</p>
 
+    <h2>Datatypes </h2>
+    https://www.tutorialsteacher.com/codeeditor?cid=js-171
+
+    <h1>Demo: Loosely type</h1>
+
+	<script>
+		var myVar = 100;
+		myVar = true;
+		myVar = null;
+		myVar = undefined;
+		myVar = "Steve";
+
+		alert(myVar);
+    </script>
+
+
+
+
+
+
     <h2>JavaScript Operators</h2>
 
           <p>
@@ -358,6 +378,240 @@
               <li>Conditional Operators</li>
             </ol>
 
+            <p id = "12">
+              <script type="text/javascript">
+
+                var name = "Xandra"
+                var id = 123456
+                var alive = true
+                document.getElementById("12").innerHTML = name+ " " +id+ " "+alive;
+
+              </script>
+
+
+            </p>
+            <div id="exercise-1">
+            </div>
+
+  <p>The following info has been taken from : <br>
+    https://www.tutorialsteacher.com/javascript/javascript-operators</p>
+
+  <h3>Arithmetic Operators</h3>
+  <p>
+    Operator	Description
++	Adds two numeric operands.
+-	Subtract right operand from left operand
+*	Multiply two numeric operands.
+/	Divide left operand by right operand.
+%	Modulus operator. Returns remainder of two operands.
+++	Increment operator. Increase operand value by one.
+--	Decrement operator. Decrease value by one.
+
+  </p>
+
+  <p id="ex1"></p>
+  <p id = "ex2"></p>
+  <p id = "ex3"></p>
+  <p id = "ex4"></p>
+  <p id = "ex5"></p>
+  <p id = "ex6"></p>
+  <p id = "ex7"></p>
+  <script type="text/javascript">
+
+    var x = 5, y = 10, z = 15;
+    document.getElementById("ex1").innerHTML = x + y;//returns 15
+
+		document.getElementById("ex2").innerHTML = y - x;//returns 5
+
+		document.getElementById("ex3").innerHTML = x * y; //returns 50
+
+		document.getElementById("ex4").innerHTML = y / x; //returns 2
+
+		document.getElementById("ex5").innerHTML = x % 2; //returns 1
+
+		x++;
+		document.getElementById("ex6").innerHTML = x; //returns 6
+
+		x--;
+		document.getElementById("ex7").innerHTML = x; //returns 5
+
+  </script>
+
+  <p>The ++ adds by 1 and -- lessens by 1.<br>
+    With ++ and --, the outcome will be calculated with the new outcome from the id.<br>
+    + operator performs concatenation operation when one of the operands is of string type.<br>
+    The + operator performs operation on operands of different data types.
+  </p>
+
+  <p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+
+	<script>
+		var a = 5, b = "Hello ", c = "World!", d = 10;
+
+		document.getElementById("p1").innerHTML = a + b; /*returns 5Hello*/
+
+		document.getElementById("p2").innerHTML = b + c; /*returns Hello World!*/
+
+		document.getElementById("p3").innerHTML = a + d; /*returns 15*/
+
+    </script>
+
+
+  <h3>Comparison operators</h3>
+
+  ==	Compares the equality of two operands without considering type.
+===	Compares equality of two operands with type.
+!=	Compares inequality of two operands.
+The > Checks whether left side value is greater than right side value. If yes then returns true otherwise false.
+<	Checks whether left operand is less than right operand. If yes then returns true otherwise false.
+>=	Checks whether left operand is greater than or equal to right operand. If yes then returns true otherwise false.
+<=	Checks whether left operand is less than or equal to right operand. If yes then returns true otherwise false.
+
+  <p id="p4"></p>
+	<p id="p5"></p>
+	<p id="p6"></p>
+	<p id="p7"></p>
+	<p id="p8"></p>
+	<p id="p9"></p>
+	<p id="p10"></p>
+	<p id="p11"></p>
+	<p id="p12"></p>
+  <p id="p13"></p>
+
+
+	<script>
+		var a = 5, b = 10, c = "5";
+		var x = a;
+
+		document.getElementById("p4").innerHTML = a == c; /* returns true: compares  equality of two operands without considering type (number or string)*/
+
+		document.getElementById("p5").innerHTML = a === c; /*returns false: compares equality of two operands with type */
+
+		document.getElementById("p6").innerHTML = a == x; /* returns true: x = also a and  compares  equality of two operands without considering type*/
+
+		document.getElementById("p7").innerHTML = a != b; /* returns true: Compares inequality of two operands*/
+
+		document.getElementById("p8").innerHTML = a > b; /* returns false: Checks whether left side value is greater than right side value. If yes then returns true otherwise false*/
+
+		document.getElementById("p9").innerHTML = a < b; /* returns true: 	Checks whether left operand is less than right operand. If yes then returns true otherwise false.*/
+
+		document.getElementById("p10").innerHTML = a >= b; /*returns false */
+
+		document.getElementById("p11").innerHTML = a <= b; /* true*/
+
+		document.getElementById("p12").innerHTML = a >= c; /*true */
+
+		document.getElementById("p13").innerHTML = a <= c; /*true*/
+    </script>
+
+  <h3>Logical operatord</h3>
+
+  &&	&& is known as AND operator. It checks whether two operands are non-zero (0, false, undefined, null or "" are considered as zero), if yes then returns 1 otherwise 0.
+||	|| is known as OR operator. It checks whether any one of the two operands is non-zero (0, false, undefined, null or "" is considered as zero).
+!	! is known as NOT operator. It reverses the boolean result of the operand (or condition).
+
+<p id="p14"></p>
+	<p id="p15"></p>
+	<p id="p16"></p>
+	<p id="p17"></p>
+	<p id="p18"></p>
+
+	<script>
+		var a = 5, b = 10;
+
+		document.getElementById("p14").innerHTML = (a != b) && (a < b); /* returns true */
+
+		document.getElementById("p15").innerHTML = (a > b) || (a == b); /* returns false */
+
+		document.getElementById("p16").innerHTML = (a < b) || (a == b); /* returns true*/
+
+		document.getElementById("p17").innerHTML = !(a < b); /* returns false */
+
+		document.getElementById("p18").innerHTML = !(a > b); /* returns true*/
+
+    </script>
+
+  <h3>Assignment operators</h3>
+
+  <p>
+    JavaScript includes assignment operators to assign values to variables with less key strokes.<br>
+    =	Assigns right operand value to left operand.
++=	Sums up left and right operand values and assign the result to the left operand.
+-=	Subtract right operand value from left operand value and assign the result to the left operand.
+*=	Multiply left and right operand values and assign the result to the left operand.
+/=	Divide left operand value by right operand value and assign the result to the left operand.
+%=	Get the modulus of left operand divide by right operand and assign resulted modulus to the left operand.
+  </p>
+
+  <p id="p30"></p>
+	<p id="p31"></p>
+	<p id="p32"></p>
+	<p id="p33"></p>
+	<p id="p34"></p>
+	<p id="p35"></p>
+
+	<script>
+		var x = 5, y = 10;
+
+		x = y;
+		document.getElementById("p30").innerHTML = x; /*would be 10 but the outcome is 10*/
+
+		x += 1;
+		document.getElementById("p31").innerHTML = x; /* would be 6 but the outcome is 11*/
+
+		x -= 1;
+		document.getElementById("p32").innerHTML = x; /* would be 4 but the outcome is 10 */
+
+		x *= 5;
+		document.getElementById("p33").innerHTML = x; /* would be 25 but the outcome is 50*/
+
+		x /= 5;
+		document.getElementById("p34").innerHTML = x; /* would be 1 but the outcome is 10*/
+
+		x %= 2;
+		document.getElementById("p35").innerHTML = x; /*  would be 1 but the outcome is 0*/
+
+    </script>
+
+    <h3>Tenary operator</h3>
+
+    <p>
+      JavaScript includes special operator called ternary operator :? that assigns a value to a variable based on some condition. This is like short form of if-else condition.<br>
+      Syntax:<br>
+      <condition> ? <value1> : <value2>;
+      <br>
+      Ternary operator starts with conditional expression followed by ? operator.<br>
+       Second part ( after ? and before : operator) will be executed if condition turns out to be true.<br>
+        If condition becomes false then third part (after :) will be executed.
+    </p>
+
+    <p id="p40"></p>
+	<p id="p41"></p>
+
+	<script>
+		var a = 10, b = 5;
+
+		var c = a > b? a : b;
+		var d = a > b? b : a;
+
+		document.getElementById("p40").innerHTML = c;
+
+		document.getElementById("p41").innerHTML = d;
+
+    </script>
+
+    <h4>Points to remember:</h4>
+      <ol>
+        <li>
+          JavaScript includes operators that perform some operation on single or multiple operands (data value) and produce a result.
+        </li>
+        <li>JavaScript includes various categories of operators: Arithmetic operators, Comparison operators, Logical operators, Assignment operators, Conditional operators.
+        </li>
+        <li>ernary operator ?: is a conditional operator.
+        </li>
+      </ol>
 
 
 
@@ -381,7 +635,18 @@
 
 
 
-<script src="javascript.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="basicJavascript.js"></script>
 
 </body>
 </html>
